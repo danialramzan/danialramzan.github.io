@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website Title</title>
+  <style>
+    .hidden-link {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -13,33 +28,34 @@
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
       {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
+      The code below dynamically generates a sidebar nav of pages with
+      `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-          {% endif %}
-        {% endif %}
+      {% if node.title != null %}
+      {% if node.layout == "page" %}
+      <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+      {% endif %}
+      {% endif %}
       {% endfor %}
 
-<!--       ADD EXTRA ELEMENTS HERE -->
-<!--       e.g <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a> -->
-      
+      <!-- ADD EXTRA ELEMENTS HERE -->
+      <!-- e.g <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a> -->
+
       <span class="sidebar-nav-item">Based on <a href="https://github.com/mdo/hyde" target="_blank">Hyde v{{ site.version }}</a></span>
     </nav>
 
     <p>&copy;
       {% if site.time | date: '%Y' == '2024' %}
-      <a href="https://www.youtube.com/watch?v=YG3EhWlBaoI" style="display:none;" target="_blank">{{ site.time | date: '%Y' }}</a>.
+      <a href="https://www.youtube.com/watch?v=YG3EhWlBaoI" target="_blank" class="hidden-link">{{ site.time | date: '%Y' }}</a>.
       {% else %}
       {{ site.time | date: '%Y' }}.
       {% endif %}
       All rights reserved.
     </p>
-
   </div>
 </div>
+</body>
+</html>
