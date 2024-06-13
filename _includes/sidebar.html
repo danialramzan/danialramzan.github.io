@@ -34,11 +34,12 @@
 
     <p>&copy;
       {% if site.time | date: '%Y' == '2024' %}
-      <a href="https://www.youtube.com/watch?v=YG3EhWlBaoI">{{ site.time | date: '%Y' }}</a>
+      <a href="https://www.youtube.com/watch?v=YG3EhWlBaoI" style="display:none;" target="_blank">{{ site.time | date: '%Y' }}</a>.
       {% else %}
-      {{ site.time | date: '%Y' }}
+      {{ site.time | date: '%Y' }}.
       {% endif %}
-      . All rights reserved.
+      All rights reserved.
     </p>
+
   </div>
 </div>
