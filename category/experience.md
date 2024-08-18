@@ -1,7 +1,7 @@
 ---
 #layout: page
 layout: category
-title: Work Experience
+title: Experience
 #sidebar_link: true
 ---
 

@@ -1,10 +1,16 @@
 .back-link {
     font-size: 80%;
+
     a {
         color: currentColor;
-	 svg {
+
+        svg {
             fill: currentColor;
         }
     }
-}
 
+    // Hide the back-link on screens smaller than 49rem
+    @media (max-width: 49rem) {
+        display: none;
+    }
+}
