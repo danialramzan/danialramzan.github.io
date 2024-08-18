@@ -10,8 +10,8 @@ permalink:        pretty
 title:            Portfolio
 tagline:          'A Jekyll theme'
 description:      'Welcome to my WIP Portfolio website!'
-url:              "https://danialramzan.github.io"
-baseurl:          "/danialramzan.github.io"
+url:              http://hyde.getpoole.com
+baseurl:          /
 
 author:
   name:           'Mark Otto'
