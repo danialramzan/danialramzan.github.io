@@ -3,9 +3,9 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Portfolio
-tagline:          'A Jekyll theme'
-description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
+title:            'DANIAL RAMZAN'
+tagline:          'Portfolio Website'
+description:      ''
 url:              "https://danialramzan.github.io"
 baseurl:          ""
 github_username:  danialramzan
@@ -16,8 +16,8 @@ github_username:  danialramzan
                   # sidebar_blog_link below.
 
 author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+  name:           'Danial Zoraiz Ramzan'
+  url:            https://github.com/danialramzan
 
 paginate:         5
 # paginate_path:    '/page:num'
