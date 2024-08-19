@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resume
-sidebar_link: true
+sidebar_link: false
 ---
 
 <div id='resume-embed' class="resume-embed">

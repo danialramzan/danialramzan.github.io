@@ -9,6 +9,9 @@ description:      ''
 url:              "https://danialramzan.github.io"
 baseurl:          ""
 github_username:  danialramzan
+linkedin_username: danialramzan
+google_analytics: G-03PZSBWDF0
+
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
@@ -24,7 +27,7 @@ paginate:         5
                     # Or '/blog/page:num' if you want to move your index pages
 
 plugins:
-  - jekyll-feed
+#  - jekyll-feed #removed feed! to re-enable uncomment this line and uncomment feed like in jekyll-theme-hydeout.gemspec
   - jekyll-gist
   - jekyll-paginate
 
