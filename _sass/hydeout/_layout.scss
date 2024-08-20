@@ -113,6 +113,27 @@ body {
   .profile {
     padding: $section-spacing; // Add padding around profile section to prevent it from touching screen edges
   }
+
+  //.profile {
+  //  margin: 0; /* Reset all margins */
+  //  padding: $section-spacing; /* Reset all padding */
+  //  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  //  width: 100%; /* Ensure the element takes full width of its container */
+  //}
+
+  //.profile {
+  //  margin: 0;
+  //  padding-top: $section-spacing;
+  //  padding-right: $section-spacing;
+  //  padding-bottom: $section-spacing;
+  //  padding-left: $section-spacing; /* Adjust if needed */
+  //  box-sizing: border-box;
+  //  width: 100%;
+  //}
+
+
+
+
 }
 
 .home #sidebar {
@@ -244,7 +265,7 @@ body {
     }
 
     > * {
-      //max-width: 40rem;
+      max-width: 100%;
       padding: 0;
     }
   }
@@ -341,3 +362,14 @@ body {
     font-size: normal;
   }
 }
+
+.container {
+  max-width: 100%; /* Ensure the container does not exceed the page width */
+  overflow-wrap: break-word; /* Break words that are too long */
+  word-wrap: break-word; /* Compatibility for older browsers */
+  word-break: break-all; /* Breaks at any character to prevent overflow */
+  hyphens: auto; /* Hyphenate words if needed */
+  box-sizing: border-box; /* Include padding and borders within width */
+  padding: $section-spacing * 2; /* Maintain padding if necessary */
+}
+
