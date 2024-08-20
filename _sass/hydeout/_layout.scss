@@ -365,9 +365,9 @@ body {
 
 .container {
   max-width: 100%; /* Ensure the container does not exceed the page width */
-  overflow-wrap: break-word; /* Break words that are too long */
+  // overflow-wrap: break-word; /* Break words that are too long */   !!! not needed !!!
   word-wrap: break-word; /* Compatibility for older browsers */
-  word-break: break-all; /* Breaks at any character to prevent overflow */
+  word-break: break-word; /* Breaks at any character to prevent overflow */
   hyphens: auto; /* Hyphenate words if needed */
   box-sizing: border-box; /* Include padding and borders within width */
   padding: $section-spacing * 2; /* Maintain padding if necessary */
