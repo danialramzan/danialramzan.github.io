@@ -108,6 +108,13 @@ body {
   Mobile view for home page)
 ----------------------------------------------------------- */
 
+@media (max-width: $large-breakpoint) {
+
+  .profile {
+    padding: $section-spacing; // Add padding around profile section to prevent it from touching screen edges
+  }
+}
+
 .home #sidebar {
 
   // Center sidebar content
@@ -132,6 +139,7 @@ body {
   // line-height on top
   > *:last-child {
     margin-bottom: 0.5rem;
+
   }
 }
 
@@ -141,6 +149,7 @@ body {
 
 @media (min-width: $large-breakpoint) {
   body {
+  //  padding: $section-spacing $section-spacing $section-spacing;
     flex-direction: row;
     min-height: 100vh;
     -webkit-overflow-scrolling: touch;
@@ -235,7 +244,7 @@ body {
     }
 
     > * {
-      max-width: 38rem;
+      //max-width: 40rem;
       padding: 0;
     }
   }
