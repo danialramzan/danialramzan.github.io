@@ -5,52 +5,41 @@ title: Experience
 #sidebar_link: true
 ---
 
+
+### UBC Subbots Engineering Design Team
+**Software, Sound Localization Subteams**  
+*October 2023 – Present*  
+Vancouver, BC
+
+- Modularized Python-based sound localization software with real-time data pipelines, enabling integration with our submersible’s C++ system.
+- Configured and set up hardware by enabling global SSH access on Linux systems using ngrok, allowing the team to securely remote into devices.
+- Updated submersible’s ROS2 version to improve compatibility, streamlining development for 13+ students.
+
 ### UBC Sauder School of Business
-**Learning Services Support Student**  
-*September 2023 - Present*  
-Vancouver, British Columbia, Canada
+**Learning Services Undergraduate Academic Assistant**  
+*September 2023 – Present*  
+Vancouver, BC
 
-- Explored Workday REST API capabilities, drafting a plan to reduce shift logging time by 50%, pending HR approval.
-- Delivered on-the-spot IT/AV support, troubleshooting technical issues like malfunctioning screens and resolving them promptly to minimize disruptions during classes.
-- Utilized the Panopto video editor to edit recorded lectures as required on a situation-by-situation basis.
-- Provided support in the Learning Services office during class hours to address last-minute equipment needs, including tasks such as arranging tables or alternative seating/presentation orientations.
-- Gained valuable insight into the organizational structure of an institution, learning about effective strategies for interacting with various departments and teams.
-
----
-
-### UBC Subbots
-**Sound Localization Team Member**  
-*October 2023 - Present*  
-Vancouver, British Columbia, Canada
-
-- Leveraged Python3 libraries (Pandas, NumPy, SciPy, matplotlib) and techniques like FFT for data visualization.
-- Implemented and tested digital filtering methods such as Butterworth and FIR filters, contributing to optimizing wave and noise separation for sound localization.
-- Applied the Fast Fourier Transform to analyze and enhance the effectiveness of different filtering methods.
-- Collaborated on brainstorming successful implementation strategies for sound localization.
-
----
+- Delivered comprehensive IT and AV support to faculty, facilitating flawless class operations while producing edited recordings of lectures that enhanced the learning experience for 300+ students per term.
+- Identified and proposed optimizations to inefficiencies by researching Workday REST calls to reduce shift logging time by 50% and developing Python scripts to cut down on inefficiency.
+- Assisted in organizing the Learning Analytics Hackathon with 80+ participants, setting up meetings, and providing advice on various aspects, contributing to its successful execution.
 
 ### Lotus Addiction Therapy
-**Back-end Developer**  
-*December 2023 - July 2024*  
-Toronto, Ontario, Canada
+**Software Engineer**  
+*December 2023 – July 2024*  
+Caledon, ON
 
-- Excelled as one of the top PERN backend engineers at Loki, implementing user authentication, bookings, payments, and more.
-- Dockerized TypeORM Postgres database and used pgAdmin4 and Postman to create test routes, decreasing testing time by 70%.
-
----
+- Developed and integrated secure authentication systems, implementing JWT Web Tokens, booking functionalities, and payment processing through Stripe, using the PERN Stack.
+- Dockerized the PostgreSQL database, reducing setup & ensuring consistency across developer environments.
+- Leveraged pgAdmin4 for database management & Postman to create RESTful routes, reducing testing time by 70%.
 
 ### igniteXL Ventures
-**Extern**  
-*April 2024 - May 2024*  
-Palo Alto, California, United States
+**AI Venture Capital Deal Sourcing Extern**  
+*April 2024 – May 2024*  
+Palo Alto, CA
 
-- Gained a comprehensive understanding of VC deal sourcing fundamentals and investment thesis development.
-- Practiced variable estimation techniques such as market sizing and revenue projection.
-- Utilized platforms like Crunchbase and theOrg for in-depth research and used Perplexity and GPT-4 for prompt engineering.
-- Produced a concise and impactful VC investment summary incorporating research insights and presented them.
-
----
+- Utilized platforms like Crunchbase & theOrg to perform in-depth research & Perplexity for prompt engineering.
+- Produced and presented a concise and impactful VC investment summary incorporating research insights.
 
 ### The Shine Network Institute
 **Application Developer**  

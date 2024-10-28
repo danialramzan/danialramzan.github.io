@@ -18,65 +18,66 @@ title: Projects
 
 [//]: # (matter.)
 
-### Personal Website
-**Duration:** June 2024 - Present  
-**Associated with:** The University of British Columbia  
-Restarted work on personal website from scratch on August 17th, 2024.
 
-**Skills:** Markdown, CI/CD, Jekyll, HTML, CSS, SCSS, Web Design, Graphic Design, Git, Debugging, Problem Solving, Ruby, Linux
+### back&forth @ Learning Analytics Hackathon 2024
+*October 2024*
 
-![Personal Website Thumbnail](assets/website_thumbnail.png)
+- Engineered a learning analytics tool using the Canvas API, Python, and R to extract and analyze online course discussions, explore participation trends, resulting in data-driven course improvement recommendations.
+- Performed HTML data cleaning with BeautifulSoup on 70+ discussion threads. Structured the content into CSV format, complemented by sentiment analysis using TextBlob to identify student interaction patterns.
+- Introduced back&forth, an AI chatbot designed to encourage deeper engagement among students by prompting thoughtful interactions and providing personalized feedback.
 
----
+### Uncovered Interest Rate Parity: Empirical Study with Linear Regression
+*August 2024 – Present*
 
-### Dynamic Billiards
-**Duration:** January 2021 - July 2024  
-**Associated with:** The University of British Columbia  
-A Python project demonstrating the principles of dynamic billiards through various collision scenarios, originally created during high school as a proof of concept for collisions based on Newton's Law of Restitution. Expanded to include more complex collision simulations.
+- Performed an in-depth empirical study on uncovered interest rate parity (UIP) using linear regression models to assess if UIP holds in practice.
+- Analyzed secured and unsecured risk-free rates such as SOFR, CORRA, SONIA, TONAR, sourced from reputable financial institutions including the Bank of Japan and Federal Reserve.
+- Gained proficiency in using a Bloomberg Terminal for real-time data gathering and economic research, which significantly enriched my analysis and understanding of global interest rates.
 
-- **Linear Collisions:** Simulates two objects colliding in a straight line, demonstrating the conservation of momentum and energy.
-- **Angular Collisions:** Models collisions at an angle, reflecting more intricate billiard dynamics.
-- **Pi Approximation:** Uses colliding balls to approximate the value of π, inspired by Grant Sanderson's (3Blue1Brown) video.
+### Portfolio Website (danialramzan.github.io)
+*August 2024 – Present*
 
-**Skills:** Matrices, NumPy, Mathematical Modeling
+- Built a minimalist, responsive website using Jekyll, HTML, CSS, and Liquid, with deployment managed through GitHub Pages and CI/CD.
+- Configured local development environment using Ruby, leveraging Gemfiles for dependency management.
+- Employed Google Analytics for detailed insights into visitor behavior, enabling data-driven improvements.
+- Ensured a responsive design for a consistent & intuitive user experience across all devices (tested on 5+ devices).
 
-![Dynamic Billiards Diagram](assets/diagram.png)
+### Dynamic Billiards Simulator: Physics Simulation Project
+*July 2024 – Present*
 
----
+- Simulated complex billiard collisions in Python, incorporating both linear and angular dynamics with a variable coefficient of restitution (COR) to model a wide array of realistic physical interactions.
+- Enhanced the simulation’s complexity by introducing features to approximate the value of pi to 7+ decimal places through dynamic collision modeling, based off a mathematical paper.
+- Planned future developments include a GUI implementation, visual physics engine, and porting the program to C++ for improved computational efficiency.
 
-### Breaking Bad Habits
-**Duration:** November 2023  
-**Associated with:** The University of British Columbia  
-"Breaking Bad Habits" is a supportive app dedicated to aiding individuals on their journey towards overcoming drug abuse, developed during HackCamp 2023. The app provides personalized tools, resources, and a community-driven approach.
+### Diabetes Classifier: Logistic Regression Project
+*July 2024 – August 2024*
 
-**Skills:** Teamwork, Android Studio, Java, Project Management, Version Control
+- Conducted a data science project predicting diabetes risk using the Pima Indians Diabetes dataset, assessing model limitations and accuracy.
+- Collaborated with peers on exploratory data analysis (EDA), data preprocessing, model training, and model evaluation, achieving more than 80% accuracy on test data.
+- Documented model challenges and proposed improvements through alternative algorithms and data handling techniques for better prediction accuracy.
 
-![Breaking Bad Habits Splash Screen](assets/breaking_bad_habits_splash.png)  
-![Breaking Bad Habits Home Screen](assets/breaking_bad_habits_home.png)
+### Social Media Scraper: Automated Data Extraction Tool
+*January 2024*
 
----
+- Constructed a Python-based data scraping tool using BeautifulSoup (BS4) and Selenium to gather market rent prices to help price my summer sublet.
+- Extracted post data from social media groups by interpreting HTML class names and handling errors.
+- Implemented data cleaning and transformation processes using Pandas to support downstream analysis, storing results in CSV format for easy access.
 
-### FinanciallyFit
-**Duration:** February 2023 - May 2023  
-**Associated with:** The University of British Columbia  
-FinanciallyFit revolutionizes gym memberships by providing financial incentives for sticking to your workout plan. Developed in Java, this project integrates a system where deviation from your planned schedule results in additional charges, creating a unique approach to fitness motivation.
+### Breaking Bad Habits Android App @ HackCamp 2023
+*November 2023*
 
-**Skills:** Java, CI/CD, User Stories, UML, Software Design Patterns, Business Analysis
+- Developed Android app in a team of 4 to address substance abuse in British Columbia using Android Studio (Java).
+- Created a logging system for users to track progress, emotions, and challenges in their rehabilitation journey.
+- Incentivized self-care tasks by adding an interactive map of nearby mental health facilities with ratings.
 
-![FinanciallyFit Member Screen](assets/financiallyfit_member_screen.png)
+### FinanciallyFit: Reverse Attendance-Based Java Billing App
+*September 2023 – December 2023*
 
----
+- Pioneered a novel full-stack gym billing system, which imposes financial penalties for missed gym sessions.
+- Implemented user management, bill generation, data persistence, etc., with testing using JUnit and an intuitive GUI.
+- Achieved 102% on the course project, integrated user stories and CI/CD principles, streamlining future add-ons.
 
-### Pulsar Classifier
-**Duration:** April 2023 - May 2023  
-**Associated with:** The University of British Columbia  
-This project utilized R within a Jupyter Notebook to perform data analysis and build a KNN classification model. The objective was to classify whether an observation corresponds to a pulsar star based on specific variables.
+### Lead Data Scientist, Pulsar Classifier
+*March 2023 – April 2023*
 
-**Skills:** Leadership, Data Science, Machine Learning, K-Nearest Neighbors (KNN), Data Visualization, Exploratory Data Analysis, Data Wrangling, Technical Communication
-
----
-
-### Facebook Scraper
-A work-in-progress scraper for Facebook used to gather market data for rent pricing.
-
-**Skills:** Market Research, Data Analysis, Selenium, Beautiful Soup, Web Scraping
+- Led a team of 4 on a project to accurately classify pulsars using the KNN machine learning classification algorithm on the HTRU2 dataset, focusing on 8 key variables for predictive analytics using R.
+- Produced a pulsar classifier with a >90% accuracy on test data while avoiding overfitting. Achieved 95% in the project, performing EDA, model training, and outlining our process in Jupyter Notebooks for a streamlined workflow.
