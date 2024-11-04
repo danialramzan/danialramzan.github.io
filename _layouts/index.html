@@ -13,19 +13,19 @@ layout: default
 
 <div id="welcome-message"></div>
 
-<script>
-    fetch('https://api.ipgeolocation.io/ipgeo?apiKey=518ac72a8c1d4676bb56c4eb118a9de1')
-        .then(response => response.json())
-        .then(data => {
-            const country = data.country_name;
-            const message = `Welcome to my personal website, visitor from ${country}!`;
-            document.getElementById('welcome-message').innerText = message;
-        })
-        .catch(error => {
-            console.error('Error fetching location:', error);
-            document.getElementById('welcome-message').innerText = "Welcome to my personal website!";
-        });
-</script>
+<!--<script>-->
+<!--    fetch('https://api.ipgeolocation.io/ipgeo?apiKey=518ac72a8c1d4676bb56c4eb118a9de1')-->
+<!--        .then(response => response.json())-->
+<!--        .then(data => {-->
+<!--            const country = data.country_name;-->
+<!--            const message = `Welcome to my personal website, visitor from ${country}!`;-->
+<!--            document.getElementById('welcome-message').innerText = message;-->
+<!--        })-->
+<!--        .catch(error => {-->
+<!--            console.error('Error fetching location:', error);-->
+<!--            document.getElementById('welcome-message').innerText = "Welcome to my personal website!";-->
+<!--        });-->
+<!--</script>-->
 This website was built with Jekyll, HTML, CSS, and Liquid, and deployed using Ruby. I also integrated Google Analytics into the website, because I love working with data.
 
 Speaking of Google Analytics, I see this website has recently started to gain plenty of traction from what I assume are job recruiters and hiring managers (mainly from the United States).
