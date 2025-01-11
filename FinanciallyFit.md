@@ -28,7 +28,7 @@ Ab temporibus consequatur et culpa omnis et dolor Quis et cupiditate nihil et qu
 
 
 
-## Terms of Service {#tos}
+## Terms of Service {#terms-of-service}
 
 
 
