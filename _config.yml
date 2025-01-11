@@ -30,6 +30,7 @@ plugins:
 #  - jekyll-feed #removed feed! to re-enable uncomment this line and uncomment feed like in jekyll-theme-hydeout.gemspec
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-redirect-from
 
 # Sidebar link settings
 sidebar_home_link:  true

@@ -3,6 +3,7 @@
 layout: category
 title: Projects
 #sidebar_link: true
+permalink: /projects/
 ---
 
 [//]: # (<p class="message">)

@@ -3,6 +3,7 @@
 layout: category
 title: Experience
 #sidebar_link: true
+permalink: /experience/
 ---
 
 
