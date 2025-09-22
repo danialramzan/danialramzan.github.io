@@ -20,3 +20,4 @@ end
 
 gem "webrick"
 gem "jekyll-theme-hydeout", "~> 4.1"
+gem "csv"
