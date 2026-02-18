@@ -6,17 +6,22 @@ layout: default
 {% capture markdown_content %}
 <!--ENTER MARKDOWN CODE BELOW-->
 
-![Headshot](assets/headshot2.jpeg){: style="float: right; margin-left: 5%; width: 30%;"}
-## <<Hi, I'm Danial>>.
 
-#### A fourth year Bachelor of Science student studying Mathematics, Computer Science, and Data Science at The University of British Columbia, in Vancouver, Canada.
+##### Skip to: [Experience](#experience) | [Projects](#projects) | [GitHub](https://github.com/danialramzan){:target="_blank"}  | [LinkedIn](https://www.linkedin.com/in/danialramzan){:target="_blank"}  | [Resume](resume)
 
 
-##### Currently working at [Salyx Medical](https://salyxhealth.ca/){:target="_blank"} , a biomedical startup in Victoria, BC, where I’m developing a full-stack Android application that helps elderly care homes monitor their residents more efficiently. [<sub>[Android Studio / Kotlin / Jetpack Compose / Postgres / JWT / Git / REST API's]</sub>](https://github.com/danialramzan){:target="_blank"}
+<!--![Headshot](assets/headshot2.jpeg){: style="float: right; margin-left: 5%; width: 30%;"}-->
+## Hey, I'm Danial.
+
+#### A fourth year Bachelor of Science student studying Computer Science, Mathematics, and Data Science at The University of British Columbia, in Vancouver, Canada.
 
 
->  _"Why should you work with me?"_
-> -   Multicultural experience from having lived in vastly different parts of the world.
+##### <u>Currently seeking internships for Summer 2026.
+
+##### [MAY2025-JAN2026] Previously worked at [Salyx Medical](https://salyxhealth.ca/){:target="_blank"}, a biomedical startup in Victoria, BC, where I worked on their BLE Vitals Monitoring app, as well as bootstrapped development of their new full-stack Android application that helps elderly care homes monitor their residents more efficiently. [<sub>[Android Studio / Kotlin / Jetpack Compose / Postgres / JWT / Git / REST API's]</sub>](https://github.com/danialramzan){:target="_blank"}
+
+
+>  _Why should you work with me?_
 > -   Diverse professional experience: I’ve worked in startups, in a traditional office environment, and as part of an engineering design team.
 > - Lots of self-directed project experience ([https://github.com/danialramzan](https://github.com/danialramzan)).
 > - Willing to learn literally anything if haven't already.
@@ -95,10 +100,6 @@ This website was built with Jekyll, HTML, CSS, and Liquid, and deployed using Ru
 
 
 
-
-## Skip to: [Experience](experience) | [Projects](projects) | [GitHub](https://github.com/danialramzan){:target="_blank"}  | [LinkedIn](https://www.linkedin.com/in/danialramzan){:target="_blank"}  | [Resume](resume)
-
-
 <!--ENTER MARKDOWN CODE ABOVE-->
 {% endcapture %}
 
@@ -107,3 +108,12 @@ This website was built with Jekyll, HTML, CSS, and Liquid, and deployed using Ru
 <div class="profile">
     {{ markdown_content | markdownify }}
 </div>
+
+{% assign sections = site.pages | where_exp: "p", "p.section_id" %}
+
+{% for p in sections %}
+<section id="{{ p.section_id }}">
+    <h1 id="{{ p.section_id }}">{{ p.title }}</h1>
+    {{ p.content | markdownify }}
+</section>
+{% endfor %}
