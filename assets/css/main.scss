@@ -2,12 +2,21 @@
 # Jekyll needs front matter for CSS
 ---
 
-$sidebar-bg-color: #bcbccc;
+$sidebar-bg-color: #000000;
 //$sidebar-bg-color:#d90166;
-$sidebar-fg-color: #3b3b3b;
+$sidebar-fg-color: #00ff41;
 $link-color: #89f45f;
-$body-bg: #2a281c;
-$body-color: #ffffff;
+$body-bg: #000000;
+$body-color: #00ff41;
 $heading-color: #ffffff;
+
+
+//$sidebar-bg-color: #000000;
+////$sidebar-bg-color:#d90166;
+//$sidebar-fg-color: #3b3b3b;
+//$link-color: #89f45f;
+//$body-bg: #2a281c;
+//$body-color: #00ff41;
+//$heading-color: #ffffff;
 
 @import "hydeout";
