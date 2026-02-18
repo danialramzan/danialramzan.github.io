@@ -13,11 +13,15 @@ section_id: experience
 *October 2023 – Present*  
 Vancouver, BC
 
-<div style="display: flex; gap: 10px; align-items: center;">
-    <img src="../assets/css/experience/subbots/team_photo_2024.jpg" style="height: 300px; width: auto;"> 
-    <img src="../assets/css/experience/subbots/IMG_0686.webp" style="height: 300px; width:z auto;">
-    <img src="../assets/css/experience/subbots/IMG_1096.webp" style="height: 300px; width: auto;">
+<div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+  <img src="../assets/css/experience/subbots/team_photo_2024.jpg"
+       style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+  <img src="../assets/css/experience/subbots/IMG_0686.webp"
+       style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+  <img src="../assets/css/experience/subbots/IMG_1096.webp"
+       style="height:300px; max-width:100%; width:auto; object-fit:cover;">
 </div>
+
 
 
 - Modularized Python-based sound localization software with real-time data pipelines, enabling integration with our submersible’s C++ system.

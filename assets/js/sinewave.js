@@ -3,13 +3,22 @@
         const paths = Array.from(document.querySelectorAll("path.sinePath"));
         if (!paths.length) return;
 
+
+
+        const params = new URLSearchParams(window.location.search);
+        const raw = params.get("recursion-count");
+        const n = raw && /^\d+$/.test(raw) ? Number(raw) : 0;
+
         // --- tweakables ---
         const width = 1200;
         const height = 100;
         const amplitude = 25;
-        const frequency = 15;
+        const defaultFrequency = 15;
         const speed = 0.05;
         const step = 10;
+
+        const frequency = n > 0 ? n : defaultFrequency;
+
 
         let phase = 0;
 
