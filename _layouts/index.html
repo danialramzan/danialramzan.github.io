@@ -2,12 +2,23 @@
 layout: default
 ---
 
-
 {% capture markdown_content %}
 <!--ENTER MARKDOWN CODE BELOW-->
 
+<div id="recursion-display" class="recursion-display"></div>
 
-##### Skip to: [Experience](#experience) | [Projects](#projects) | [GitHub](https://github.com/danialramzan){:target="_blank"}  | [LinkedIn](https://www.linkedin.com/in/danialramzan){:target="_blank"}  | [Resume](resume)
+
+<div style="width:100%; height:60px; overflow:hidden;">
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="none" style="width:100%; height:100%;">
+        <path class="sinePath"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              style="vector-effect: non-scaling-stroke;"></path>
+    </svg>
+</div>
+
+##### Skip to: [Experience](#experience) | [Projects](#projects) | [GitHub](https://github.com/danialramzan){:target="_blank"}  | [LinkedIn](https://www.linkedin.com/in/danialramzan){:target="_blank"}  | [Resume](resume) | <a id="recursion-link" href="{{ '/' | relative_url }}">Personal Website</a>
 
 
 <!--![Headshot](assets/headshot2.jpeg){: style="float: right; margin-left: 5%; width: 30%;"}-->
@@ -18,7 +29,7 @@ layout: default
 
 ##### <u>Currently seeking internships for Summer 2026.
 
-##### [MAY2025-JAN2026] Previously worked at [Salyx Medical](https://salyxhealth.ca/){:target="_blank"}, a biomedical startup in Victoria, BC, where I worked on their BLE Vitals Monitoring app, as well as bootstrapped development of their new full-stack Android application that helps elderly care homes monitor their residents more efficiently. [<sub>[Android Studio / Kotlin / Jetpack Compose / Postgres / JWT / Git / REST API's]</sub>](https://github.com/danialramzan){:target="_blank"}
+##### [MAY 2025-JAN 2026] Previously worked at [Salyx Medical](https://salyxhealth.ca/){:target="_blank"}, a biomedical startup in Victoria, BC, where I worked on their BLE Vitals Monitoring app, as well as bootstrapped development of their new full-stack Android application that helps elderly care homes monitor their residents more efficiently. [<sub>[Android Studio / Kotlin / Jetpack Compose / Postgres / JWT / Git / REST API's]</sub>](https://github.com/danialramzan){:target="_blank"}
 
 
 >  _Why should you work with me?_
@@ -99,11 +110,8 @@ This website was built with Jekyll, HTML, CSS, and Liquid, and deployed using Ru
 #### Feel free to reach out at danrmzn@student.ubc.ca for collaborations, opportunities, and more.
 
 
-
 <!--ENTER MARKDOWN CODE ABOVE-->
 {% endcapture %}
-
-
 
 <div class="profile">
     {{ markdown_content | markdownify }}
@@ -113,7 +121,54 @@ This website was built with Jekyll, HTML, CSS, and Liquid, and deployed using Ru
 
 {% for p in sections %}
 <section id="{{ p.section_id }}">
+
+    <div style="width:100%; height:60px; overflow:hidden;">
+        <svg viewBox="0 0 1200 100" preserveAspectRatio="none" style="width:100%; height:100%;">
+            <path class="sinePath"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  style="vector-effect: non-scaling-stroke;"></path>
+        </svg>
+    </div>
     <h1 id="{{ p.section_id }}">{{ p.title }}</h1>
     {{ p.content | markdownify }}
 </section>
 {% endfor %}
+
+
+
+    <script src="{{ '/assets/js/recursion.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/sinewave.js' | relative_url }}"></script>
+
+    <script>
+        (function () {
+            const paths = Array.from(document.querySelectorAll("path.sinePath"));
+            if (!paths.length) return;
+
+            const params = new URLSearchParams(window.location.search);
+
+            const width = 1200, height = 100, amplitude = 25, frequency = 15;
+
+            const raw = params.get("recursion-count");
+            const n = raw && /^\d+$/.test(raw) ? Number(raw) : 0;
+
+
+            let phase = 0;
+
+            function frame() {
+                let d = "";
+                for (let x = 0; x <= width; x += 10) {
+                    const y = height/2 + amplitude * Math.sin((x / width * frequency * 2 * Math.PI) + phase);
+                    d += (x === 0 ? "M" : "L") + x + "," + y + " ";
+                }
+                for (const p of paths) p.setAttribute("d", d);
+
+                phase += 0.05;
+                requestAnimationFrame(frame);
+            }
+
+            frame();
+        })();
+    </script>
+
