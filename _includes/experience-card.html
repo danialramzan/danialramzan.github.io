@@ -1,0 +1,26 @@
+<div class="xp-card">
+    <div class="xp-header">
+        <img class="xp-logo"
+             src="{{ include.logo }}"
+             alt="{{ include.company }} logo" />
+
+        <div class="xp-main">
+            <div class="xp-top">
+                <div class="xp-company">{{ include.company }}</div>
+                <div class="xp-meta">
+                    {{ include.location }} • {{ include.dates }}
+                </div>
+            </div>
+
+            <div class="xp-role">{{ include.role }}</div>
+        </div>
+    </div>
+
+    <div class="xp-content-wrapper">
+        <div class="xp-content">
+            {{ include.content | markdownify }}
+        </div>
+    </div>
+
+    <button class="xp-toggle">Show more</button>
+</div>

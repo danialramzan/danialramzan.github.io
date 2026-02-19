@@ -20,3 +20,100 @@ $heading-color: #ffffff;
 //$heading-color: #ffffff;
 
 @import "hydeout";
+
+// override hydeout default top padding!
+
+body.home .container {
+  padding-top: 1rem;
+}
+
+
+
+/* =========================
+   Experience Cards
+   ========================= */
+
+.xp-card {
+  background: #1a1a1a;          /* less dark than pure black */
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;               /* force white text */
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.xp-card,
+.xp-card * {
+  color: #ffffff;               /* override Hydeout green text */
+}
+
+.xp-card:hover {
+  background: #202020;
+  transform: translateY(-2px);
+}
+
+.xp-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.xp-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0;                    /* theme sets img margin-bottom */
+}
+
+.xp-company {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.xp-role {
+  opacity: 0.9;
+}
+
+.xp-meta {
+  font-size: 0.85rem;
+  opacity: 0.65;
+}
+
+.xp-content-wrapper {
+  overflow: hidden;
+  max-height: 100px;            /* collapsed height */
+  transition: max-height 0.35s ease;
+  margin-top: 1rem;
+}
+
+.xp-card.expanded .xp-content-wrapper {
+  max-height: 1200px;           /* big enough to fit content */
+}
+
+.xp-toggle {
+  background: transparent;
+  border: 1px solid #89f45f;
+  color: #89f45f;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.xp-toggle:hover {
+  background: #89f45f;
+  color: #000000;
+}
+
+.xp-card code {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
