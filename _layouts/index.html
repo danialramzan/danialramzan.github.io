@@ -139,7 +139,11 @@ This website was built with Jekyll, HTML, CSS, and Liquid, and deployed using Ru
             {{ p.title }}
         </h1>
 
-        {{ p.content | markdownify }}
+        {% if p.section_id == "projects" %}
+        {% include projects-section.html %}
+        {% else %}
+        {{ p.content }}
+        {% endif %}
 </section>
 {% endfor %}
 
@@ -148,19 +152,182 @@ This website was built with Jekyll, HTML, CSS, and Liquid, and deployed using Ru
     <script src="{{ '/assets/js/recursion.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/sinewave.js' | relative_url }}"></script>
 
+<!--    <script>-->
+<!--        document.addEventListener("DOMContentLoaded", () => {-->
+<!--            document.querySelectorAll(".xp-toggle").forEach(button => {-->
+<!--                button.addEventListener("click", () => {-->
+<!--                    const card = button.closest(".xp-card");-->
+<!--                    card.classList.toggle("expanded");-->
+
+<!--                    button.textContent =-->
+<!--                        card.classList.contains("expanded")-->
+<!--                            ? "Show less"-->
+<!--                            : "Show more";-->
+<!--                });-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll(".xp-toggle").forEach(button => {
+            document.querySelectorAll(".xp-card").forEach(card => {
+                const button = card.querySelector(".xp-toggle");
+                const wrapper = card.querySelector(".xp-content-wrapper");
+                const inner = card.querySelector(".xp-content-inner");
+                const preview = card.querySelector(".xp-content-preview");
+                const more = card.querySelector(".xp-content-more");
+
+                if (!button || !wrapper || !inner || !preview) return;
+
+                // If there's no extra content (no marker), hide the button and don't collapse
+                const hasMore = more && more.textContent.trim().length > 0;
+                if (!hasMore) {
+                    button.style.display = "none";
+                    wrapper.style.maxHeight = inner.scrollHeight + "px";
+                    return;
+                }
+
+                // Start collapsed to exactly preview height
+                const setCollapsedHeight = () => {
+                    wrapper.style.maxHeight = preview.scrollHeight + "px";
+                };
+
+                const setExpandedHeight = () => {
+                    // Ensure expanded height accounts for full inner content
+                    wrapper.style.maxHeight = inner.scrollHeight + "px";
+                };
+
+                // Initialize collapsed
+                card.classList.remove("expanded");
+                button.textContent = "Show more";
+                setCollapsedHeight();
+
+                // Recompute on image load inside cards (important for your photo rows)
+                card.querySelectorAll("img").forEach(img => {
+                    if (img.complete) return;
+                    img.addEventListener("load", () => {
+                        if (card.classList.contains("expanded")) setExpandedHeight();
+                        else setCollapsedHeight();
+                    });
+                });
+
+                // Toggle logic
                 button.addEventListener("click", () => {
-                    const card = button.closest(".xp-card");
+                    const expanding = !card.classList.contains("expanded");
                     card.classList.toggle("expanded");
 
-                    button.textContent =
-                        card.classList.contains("expanded")
-                            ? "Show less"
-                            : "Show more";
+                    if (expanding) {
+                        // show more first (display:block), then measure full height
+                        requestAnimationFrame(() => {
+                            setExpandedHeight();
+                        });
+                        button.textContent = "Show less";
+                    } else {
+                        setCollapsedHeight();
+                        button.textContent = "Show more";
+                    }
+                });
+
+                // Optional: keep it correct on resize (responsive text reflow)
+                window.addEventListener("resize", () => {
+                    if (card.classList.contains("expanded")) setExpandedHeight();
+                    else setCollapsedHeight();
                 });
             });
         });
     </script>
+
+    <div id="proj-modal-overlay" class="proj-modal-overlay" aria-hidden="true">
+        <div class="proj-modal" role="dialog" aria-modal="true" aria-labelledby="proj-modal-title">
+            <button class="proj-modal-close" type="button" aria-label="Close modal">×</button>
+
+            <div class="proj-modal-header">
+                <h2 id="proj-modal-title" class="proj-modal-title"></h2>
+                <div class="proj-modal-subtitle" id="proj-modal-subtitle"></div>
+            </div>
+
+            <div class="proj-modal-body" id="proj-modal-body"></div>
+
+            <div class="proj-modal-footer">
+                <div class="proj-modal-tags" id="proj-modal-tags"></div>
+
+                <a class="proj-modal-link" id="proj-modal-link" href="#" target="_blank" rel="noopener" style="display:none;">
+                    View Project <span aria-hidden="true">🔗</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const overlay = document.getElementById("proj-modal-overlay");
+            const closeBtn = overlay?.querySelector(".proj-modal-close");
+            const titleEl = document.getElementById("proj-modal-title");
+            const subtitleEl = document.getElementById("proj-modal-subtitle");
+            const bodyEl = document.getElementById("proj-modal-body");
+            const tagsEl = document.getElementById("proj-modal-tags");
+            const linkEl = document.getElementById("proj-modal-link");
+
+            if (!overlay) return;
+
+            const openModal = ({ title, subtitle, bodyHtml, link = "" }) => {
+                titleEl.textContent = title || "";
+                subtitleEl.textContent = subtitle || "";
+                bodyEl.innerHTML = bodyHtml || "";
+
+                // tags (optional, unused for now)
+                if (tagsEl) tagsEl.innerHTML = "";
+
+                if (link && linkEl) {
+                    linkEl.href = link;
+                    linkEl.style.display = "inline-flex";
+                } else if (linkEl) {
+                    linkEl.style.display = "none";
+                }
+
+                overlay.classList.add("open");
+                overlay.setAttribute("aria-hidden", "false");
+                document.body.style.overflow = "hidden";
+            };
+
+            const closeModal = () => {
+                overlay.classList.remove("open");
+                overlay.setAttribute("aria-hidden", "true");
+                document.body.style.overflow = "";
+                bodyEl.innerHTML = "";
+            };
+
+            closeBtn?.addEventListener("click", closeModal);
+            overlay.addEventListener("click", (e) => {
+                if (e.target === overlay) closeModal();
+            });
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && overlay.classList.contains("open")) closeModal();
+            });
+
+            const isIgnoredClick = (e) => {
+                // don't open modal when clicking a link/button inside card
+                return e.target.closest("a") || e.target.closest("button");
+            };
+
+            document.querySelectorAll(".proj-card").forEach(card => {
+                card.style.cursor = "pointer";
+
+                card.addEventListener("click", (e) => {
+                    if (isIgnoredClick(e)) return;
+
+                    const title = card.getAttribute("data-proj-title") || "";
+                    const subtitle = card.getAttribute("data-proj-date") || "";
+                    const link = card.getAttribute("data-proj-link") || "";
+
+                    const contentEl = card.querySelector(".proj-modal-content");
+                    const bodyHtml = contentEl ? contentEl.innerHTML : "";
+
+                    openModal({ title, subtitle, bodyHtml, link });
+                });
+            });
+        });
+    </script>
+
+
 

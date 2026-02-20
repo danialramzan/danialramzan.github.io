@@ -18,6 +18,9 @@ section_id: experience
 
 - Integrated backend services using **Retrofit**, **REST APIs**, and **OAuth 2.0** authentication for secure real-time synchronization.
 
+~B~
+
+
 **Tech**  
 `Kotlin` • `Jetpack Compose` • `BLE` • `MVVM` • `Retrofit` • `REST APIs` • `OAuth 2.0` • `Room` • `AWS` • `Python` • `C++`
 
@@ -38,6 +41,8 @@ content=salyx_content
 - Modularized Python-based sound localization software with real-time data pipelines, enabling integration with our submersible’s C++ system.
 - Configured and set up hardware by enabling global SSH access on Linux systems using ngrok, allowing the team to securely remote into devices.
 - Updated submersible’s ROS2 version to improve compatibility, streamlining development for 13+ students.
+
+~B~
 
 
 **Tech**
@@ -70,6 +75,8 @@ content=subbots_content
 - Identified and proposed optimizations to inefficiencies by researching Workday REST calls to reduce shift logging time by 50% and developing Python scripts to cut down on inefficiency.
 - Assisted in organizing the Learning Analytics Hackathon with 80+ participants, setting up meetings, and providing advice on various aspects, contributing to its successful execution.
 
+~B~
+
 {% endcapture %}
 
 
@@ -87,6 +94,9 @@ content=sauder_content
 - Developed and integrated secure authentication systems, implementing **JWT** authentication, booking flows, and **Stripe** payment processing using the **PERN** stack.
 - Dockerized the **PostgreSQL** database to reduce setup time and ensure consistent environments across developers.
 - Used **pgAdmin4** for database management and **Postman** to validate REST routes, **reducing testing time by ~70%**.
+
+~B~
+
 
 **Tech**  
 `PostgreSQL` • `Express.js` • `React` • `Node.js` • `JWT` • `Stripe` • `Docker` • `REST APIs` • `pgAdmin4` • `Postman`
@@ -106,6 +116,8 @@ content=lotus_content
 {% capture shine_content %}
 
 - Contributed to planning and redesigning a **PHP Moodle** course focused on Indigenous awareness to be more **mobile-friendly**, improving accessibility and usability. *(Signed an NDA)*
+
+~B~
 
 **Tech**  
 `PHP` • `Moodle` • `Mobile UX` • `Accessibility`
