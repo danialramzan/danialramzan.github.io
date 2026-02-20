@@ -1,0 +1,39 @@
+{% assign raw = include.content | strip %}
+{% assign items = raw | split: '~P~' %}
+
+<div class="proj-grid">
+    {% for item in items %}
+    {% assign block = item | strip %}
+    {% if block != "" %}
+
+    {%- comment -%}
+    Expected block format:
+
+    TITLE :: DATE :: IMAGE :: LINK(optional)
+    - bullet
+    - bullet
+
+    {%- endcomment -%}
+
+    {% assign lines = block | split: "\n" %}
+    {% assign header = lines[0] | strip %}
+    {% assign body_lines = lines | slice: 1, 999 %}
+    {% assign body = body_lines | join: "\n" | strip %}
+
+    {% assign hparts = header | split: "::" %}
+    {% assign title = hparts[0] | strip %}
+    {% assign date  = hparts[1] | default: "" | strip %}
+    {% assign image = hparts[2] | default: "/assets/projects/placeholder.jpg" | strip %}
+    {% assign link  = hparts[3] | default: "" | strip %}
+
+    {% include project-card.html
+    title=title
+    date=date
+    image=image
+    link=link
+    content=body
+    %}
+
+    {% endif %}
+    {% endfor %}
+</div>

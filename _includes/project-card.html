@@ -1,0 +1,22 @@
+<div class="proj-card"
+     data-proj-title="{{ include.title | escape }}"
+     data-proj-date="{{ include.date | escape }}"
+     {% if include.link and include.link != "" %}
+     data-proj-link="{{ include.link }}"
+     {% endif %}>
+
+    <div class="proj-thumb">
+        {% assign image_path = include.image | default: '/assets/404_1.png' %}
+        <img src="{{ image_path }}" alt="{{ include.title }} thumbnail" loading="lazy">
+    </div>
+
+    <div class="proj-body">
+        <div class="proj-title">{{ include.title }}</div>
+        {% if include.date %}<div class="proj-date">{{ include.date }}</div>{% endif %}
+    </div>
+
+    <!-- Hidden full content for modal -->
+    <div class="proj-modal-content" style="display:none;">
+        {{ include.content | markdownify }}
+    </div>
+</div>
