@@ -5,6 +5,7 @@ title: Experience
 sidebar_link: true
 permalink: /experience/
 section_id: experience
+order: 1
 ---
 
 
@@ -45,7 +46,7 @@ content=salyx_content
 ~B~
 
 
-**Tech**
+**Tech**  
 `Python` • `SQL` • `CI/CD` • `Python` • `SQL` • `CI/CD` • `Python` • `SQL` • `CI/CD` `Python` • `SQL` • `CI/CD` `Python` • `SQL` • `CI/CD` `Python` • `SQL` • `CI/CD`
 
 <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">

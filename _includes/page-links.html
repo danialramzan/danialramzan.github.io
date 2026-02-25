@@ -1,27 +1,11 @@
-{% comment %}
-  The code below dynamically generates a sidebar nav of pages with
-  `sidebar_link: true` in the front-matter. See readme for usage.
-{% endcomment %}
+{% assign pages_list = site.pages
+| where_exp: "p", "p.sidebar_link == true"
+| where_exp: "p", "p.section_id"
+| sort: "order" %}
 
-<!--{% assign pages_list = site.pages|sort:"sidebar_sort_order" %}-->
-<!--{% for node in pages_list %}-->
-<!--  {% if node.title != null %}-->
-<!--    {% if node.sidebar_link %}-->
-<!--      <a class="page-link {% if page.url == node.url %} active{% endif %}"-->
-<!--          href="{{ node.url | relative_url }}">{% if node.short_title != null %}{{ node.short_title }}{% else %}{{ node.title }}{% endif %}</a>-->
-<!--    {% endif %}-->
-<!--  {% endif %}-->
-<!--{% endfor %}-->
-
-{% assign pages_list = site.pages | sort:"sidebar_sort_order" %}
 {% for node in pages_list %}
-{% if node.title != null %}
-{% if node.sidebar_link %}
 <a class="page-link {% if page.url == node.url %} active{% endif %}"
    href="{{ '/' | relative_url }}#{{ node.section_id }}">
-    {% if node.short_title != null %}{{ node.short_title }}{% else %}{{ node.title }}{% endif %}
+    {% if node.short_title %}{{ node.short_title }}{% else %}{{ node.title }}{% endif %}
 </a>
-{% endif %}
-{% endif %}
 {% endfor %}
-
