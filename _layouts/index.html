@@ -119,7 +119,7 @@ This website was built with Jekyll, HTML, CSS, and Liquid, and deployed using Ru
     {{ markdown_content | markdownify }}
 </div>
 
-{% assign sections = site.pages | where_exp: "p", "p.section_id" %}
+{% assign sections = site.pages | where_exp: "p", "p.section_id" | sort: "order" %}
 
 {% for p in sections %}
 <section id="{{ p.section_id }}">
@@ -141,6 +141,8 @@ This website was built with Jekyll, HTML, CSS, and Liquid, and deployed using Ru
 
         {% if p.section_id == "projects" %}
         {% include projects-section.html %}
+        {% elsif p.section_id == "oss" %}
+        {% include oss-section.html %}
         {% else %}
         {{ p.content }}
         {% endif %}
@@ -251,9 +253,10 @@ This website was built with Jekyll, HTML, CSS, and Liquid, and deployed using Ru
             <div class="proj-modal-footer">
                 <div class="proj-modal-tags" id="proj-modal-tags"></div>
 
-                <a class="proj-modal-link" id="proj-modal-link" href="#" target="_blank" rel="noopener" style="display:none;">
-                    View Project <span aria-hidden="true">🔗</span>
+                <a class="proj-modal-link" id="proj-modal-link" href="#" target="_blank" rel="noopener">
+                    View Project 🔗
                 </a>
+
             </div>
         </div>
     </div>
