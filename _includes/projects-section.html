@@ -5,27 +5,84 @@
 <div class="proj-grid">
 
 
+{% capture maas_cluster_content %}
+- Designed and operated an 18+ node bare-metal Linux cluster using MAAS (PXE provisioning) for rapid re-imaging and reproducible node configuration across systems.
+- Developed a lightweight FastAPI (Python) service exposing webhook endpoints to monitor and control nodes (e.g., ping checks, power-on, shutdown), enabling simple event-driven cluster management.
+- Implemented secure remote administration via Cloudflare Access behind a custom domain (bssh.danrmzn.ca), enabling authenticated access without exposing SSH directly to the public internet.
+- Built automation scripts to simplify monitoring and node lifecycle management in a self-hosted environment.
+
+
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <img src="/assets/project_assets/maascluster/1.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/maascluster/2.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/maascluster/thumbnail.jpeg"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+    </div>
+
+**Tech**
+`Linux` • `MAAS` • `Python` • `FastAPI` • `Cloudflare Access` • `PXE` • `Networking` • `Infrastructure Automation`
+{% endcapture %}
+{% include project-card.html
+title="MAAS Homelab Cluster: Secure Remote Access & Infrastructure Automation"
+date="January 2025 – Present"
+image="/assets/project_assets/maascluster/thumbnail.jpeg"
+link=""
+content=maas_cluster_content
+%}
+
+{% capture financiallyfitv2_content %}
+- Designed and developed FinanciallyFit, a Java Android app that encourages productivity and accountability through
+a unique reverse billing system, charging users for missed commitments.
+- Integrated Stripe for secure payment processing and Firebase Authentication using Google Cloud Platform for
+reliable user authentication and account management.
+- Used Firestore for real-time data persistence, updates, and user analytics across the application.
+- Implemented a task scheduling and tracking system allowing users to manage gym sessions, work deadlines, and
+personal goals.
+- Planned expansion includes smartwatch health data integration via Bluetooth and LMS integrations (e.g., Canvas).
+
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <img src="/assets/project_assets/financiallyfitv2/1.jpg"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/financiallyfitv2/2.jpg"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/financiallyfitv2/3.jpg"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/financiallyfitv2/4.jpg"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/financiallyfitv2/5.jpg"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/financiallyfitv2/6.jpg"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/financiallyfitv2/thumbnail.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+    </div>
+
+**Tech**
+`Java` • `Android` • `Firebase Auth` • `Firestore` • `Stripe API` • `Google Cloud`
+{% endcapture %}
+{% include project-card.html
+title="FinanciallyFitv2 Android App"
+date="December 2024 – Present"
+image="/assets/project_assets/financiallyfitv2/thumbnail.png"
+link=""
+content=financiallyfitv2_content
+%}
+
+
 {% capture backforth_content %}
 - Engineered a learning analytics tool using the Canvas API, Python, and R to extract and analyze online course discussions, explore participation trends, resulting in data-driven course improvement recommendations.
 - Performed HTML data cleaning with BeautifulSoup on 70+ discussion threads. Structured the content into CSV format, complemented by sentiment analysis using TextBlob to identify student interaction patterns.
 - Introduced back&forth, an AI chatbot designed to encourage deeper engagement among students by prompting thoughtful interactions and providing personalized feedback.
 
-
-
-<div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-    <img src="/assets/css/experience/subbots/team_photo_2024.jpg"
-         style="height:300px; max-width:100%; width:auto; object-fit:cover;">
-    <img src="/assets/css/experience/subbots/IMG_0686.webp"
-         style="height:300px; max-width:100%; width:auto; object-fit:cover;">
-    <img src="/assets/css/experience/subbots/IMG_1096.webp"
-         style="height:300px; max-width:100%; width:auto; object-fit:cover;">
-</div>
-
-hello again!
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <img src="/assets/project_assets/backandforth/thumbnail.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+    </div>
 
 **Tech**
 `Python` • `SQL` • `CI/CD` • `Python` • `SQL` • `CI/CD` • `Python` • `SQL` • `CI/CD` `Python` • `SQL` • `CI/CD` `Python` • `SQL` • `CI/CD` `Python` • `SQL` • `CI/CD`
-
 
 {% endcapture %}
 
@@ -33,7 +90,7 @@ hello again!
 {% include project-card.html
 title="back&forth @ Learning Analytics Hackathon 2024"
 date="October 2024"
-image=""
+image="/assets/project_assets/backandforth/thumbnail.png"
 link=""
 content=backforth_content
 %}
@@ -46,7 +103,7 @@ content=backforth_content
 {% include project-card.html
 title="Uncovered Interest Rate Parity: Empirical Study with Linear Regression"
 date="August 2024 – Present"
-image=""
+image="assets/project_assets/machine_learning_placeholder.jpeg"
 link=""
 content=uip_content
 %}
@@ -60,7 +117,7 @@ content=uip_content
 {% include project-card.html
 title="Portfolio Website (danrmzn.ca)"
 date="August 2024 – Present"
-image=""
+image="/assets/project_assets/portfoliowebsite/thumbnail.png"
 link="https://danrmzn.ca"
 content=portfolio_content
 %}
@@ -69,11 +126,21 @@ content=portfolio_content
 - Simulated complex billiard collisions in Python, incorporating both linear and angular dynamics with a variable coefficient of restitution (COR) to model a wide array of realistic physical interactions.
 - Enhanced the simulation’s complexity by introducing features to approximate the value of pi to 7+ decimal places through dynamic collision modeling, based off a mathematical paper.
 - Planned future developments include a GUI implementation, visual physics engine, and porting the program to C++ for improved computational efficiency.
+
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <img src="/assets/project_assets/dynamicbilliards/1.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/dynamicbilliards/2.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/dynamicbilliards/thumbnail.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+    </div>
+
 {% endcapture %}
 {% include project-card.html
 title="Dynamic Billiards Simulator: Physics Simulation Project"
 date="July 2024 – Present"
-image=""
+image="/assets/project_assets/dynamicbilliards/thumbnail.png"
 link=""
 content=billiards_content
 %}
@@ -86,7 +153,7 @@ content=billiards_content
 {% include project-card.html
 title="Diabetes Classifier: Logistic Regression Project"
 date="July 2024 – August 2024"
-image=""
+image="/assets/project_assets/diabetesclassifier/thumbnail.png"
 link=""
 content=diabetes_content
 %}
@@ -99,7 +166,7 @@ content=diabetes_content
 {% include project-card.html
 title="Social Media Scraper: Automated Data Extraction Tool"
 date="January 2024"
-image=""
+image="assets/project_assets/machine_learning_placeholder.jpeg"
 link=""
 content=scraper_content
 %}
@@ -108,11 +175,18 @@ content=scraper_content
 - Developed Android app in a team of 4 to address substance abuse in British Columbia using Android Studio (Java).
 - Created a logging system for users to track progress, emotions, and challenges in their rehabilitation journey.
 - Incentivized self-care tasks by adding an interactive map of nearby mental health facilities with ratings.
-{% endcapture %}
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <img src="/assets/project_assets/breakingbadhabits/1.jpg"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/breakingbadhabits/2.jpg"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+    </div>
+
+    {% endcapture %}
 {% include project-card.html
 title="Breaking Bad Habits Android App @ HackCamp 2023"
 date="November 2023"
-image=""
+image="/assets/project_assets/breakingbadhabits/thumbnail.png"
 link=""
 content=badhabits_content
 %}
@@ -121,11 +195,25 @@ content=badhabits_content
 - Pioneered a novel full-stack gym billing system, which imposes financial penalties for missed gym sessions.
 - Implemented user management, bill generation, data persistence, etc., with testing using JUnit and an intuitive GUI.
 - Achieved 102% on the course project, integrated user stories and CI/CD principles, streamlining future add-ons.
+
+
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <img src="/assets/project_assets/financiallyfit/1.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/financiallyfit/2.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/financiallyfit/3.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/financiallyfit/4.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+        <img src="/assets/project_assets/financiallyfit/thumbnail.png"
+             style="height:300px; max-width:100%; width:auto; object-fit:cover;">
+    </div>
 {% endcapture %}
 {% include project-card.html
 title="FinanciallyFit: Reverse Attendance-Based Java Billing App"
 date="September 2023 – December 2023"
-image=""
+image="/assets/project_assets/financiallyfit/thumbnail.png"
 link=""
 content=financiallyfit_content
 %}
@@ -137,7 +225,7 @@ content=financiallyfit_content
 {% include project-card.html
 title="Lead Data Scientist, Pulsar Classifier"
 date="March 2023 – April 2023"
-image=""
+image="/assets/project_assets/pulsarclassifier/thumbnail.png"
 link=""
 content=pulsar_content
 %}
