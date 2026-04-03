@@ -1,23 +1,26 @@
 <div id="sidebar">
+    <div id="star-field-wrap" aria-hidden="true">
+        <div id="star-field"></div>
+    </div>
 
-    <div id="star-field" aria-hidden="true"></div>
-  <header>
-    <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
-      <a href="{{ "/" | relative_url }}">
+    <header>
+        <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
+        <a href="{{ "/" | relative_url }}">
         {% unless page.url == "/" %}
-          <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span>
+        <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span>
         {% endunless %}
         {{ site.title }}
-      </a>
+        </a>
     </{% if page.layout == "index" %}h1{% else %}div{% endif %}>
     <p class="lead">{{ site.description }}</p>
-  </header>
-  {% include sidebar-nav-links.html %}
+    </header>
 
-  {% if site.version %}
+    {% include sidebar-nav-links.html %}
+
+    {% if site.version %}
     <span class="site-version">Currently v{{ site.version }}</span>
-  {% endif %}
+    {% endif %}
 
-  {% include sidebar-icon-links.html %}
-  {% include copyright.html %}
+    {% include sidebar-icon-links.html %}
+    {% include copyright.html %}
 </div>

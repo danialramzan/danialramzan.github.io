@@ -444,11 +444,21 @@ body {
   isolation: isolate;
 }
 
-#star-field {
-  position: absolute;
-  inset: 0;
+#sidebar > * {
+  position: relative;
+  z-index: 1;
+}
+
+#star-field-wrap {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
   pointer-events: none;
-  z-index: 0;
+}
+
+#star-field {
+  position: relative;
+  width: 100%;
 }
 
 #star-field .star {
@@ -456,14 +466,6 @@ body {
   display: block;
   transform-origin: center center;
   user-select: none;
-  opacity: 0.8;
-}
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
 
-#sidebar > * {
-  position: relative;
-  z-index: 1;
-}
-
-#star-field {
-  z-index: 0;
 }
