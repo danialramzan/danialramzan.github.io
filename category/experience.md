@@ -11,19 +11,13 @@ order: 1
 
 {% capture salyx_content %}
 
-- Developed Android applications integrating **proprietary healthcare devices** for real-time vitals capture via **BLE**, bootstrapping a production platform deployed to care homes to manage residents, logs, and alerts.
-
-- Researched offloading a **machine learning vital prediction algorithm** from **AWS** to on-device inference, exploring feasibility in **Python** and **C++**, analyzing latency and performance trade-offs.
-
-- Batched daily alerts into monthly API fetches, **reducing network calls by 30×**, cutting infrastructure costs and improving app responsiveness.
-
-- Integrated backend services using **Retrofit**, **REST APIs**, and **OAuth 2.0** authentication for secure real-time synchronization.
-
+- Developed Android apps using Kotlin in Agile sprint workflows integrating proprietary healthcare devices for real-time BLE vitals capture, bootstrapped a production platform deployed to homes to manage residents, logs, alerts.
+- Conducted research on offloading a machine learning vital prediction algorithm from AWS to on-device inference, exploring feasibility using Python and C++ and analyzing performance trade-offs.
+- Batched daily alerts into monthly API fetches, reducing network calls by 30×, cutting costs and improving performance.
+- Integrated backend services using Retrofit, REST APIs, and OAuth 2.0 authentication for secure real-time data sync.
 ~B~
 
-
-**Tech**  
-`Kotlin` • `Jetpack Compose` • `BLE` • `MVVM` • `Retrofit` • `REST APIs` • `OAuth 2.0` • `Room` • `AWS` • `Python` • `C++`
+**Tech** • `Kotlin` • `Jetpack Compose` • `BLE` • `MVVM` • `Retrofit` • `REST APIs` • `Firebase` • `Room` • `OAuth 2.0` • `AWS` • `Python` • `C++`
 
 {% endcapture %}
 
@@ -45,10 +39,6 @@ content=salyx_content
 
 ~B~
 
-
-**Tech**  
-`Python` • `SQL` • `CI/CD` • `Python` • `SQL` • `CI/CD` • `Python` • `SQL` • `CI/CD` `Python` • `SQL` • `CI/CD` `Python` • `SQL` • `CI/CD` `Python` • `SQL` • `CI/CD`
-
 <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
   <img src="/assets/css/experience/subbots/team_photo_2024.jpg"
        style="height:300px; max-width:100%; width:auto; object-fit:cover;">
@@ -57,6 +47,8 @@ content=salyx_content
   <img src="/assets/css/experience/subbots/IMG_1096.webp"
        style="height:300px; max-width:100%; width:auto; object-fit:cover;">
 </div>
+
+**Tech** • `Python` • `C++` • `ROS2` • `Linux` • `SSH` • `ngrok` • `Git`
 
 {% endcapture %}
 
@@ -78,6 +70,8 @@ content=subbots_content
 
 ~B~
 
+**Tech** • `Python` • `Workday API` • `REST APIs` • `IT Support` • `AV Systems` • `Linux`
+
 {% endcapture %}
 
 
@@ -98,9 +92,8 @@ content=sauder_content
 
 ~B~
 
+**Tech** • `PostgreSQL` • `Express.js` • `React` • `Node.js` • `JWT` • `Stripe API` • `Docker` • `REST APIs` • `pgAdmin4` • `Postman`
 
-**Tech**  
-`PostgreSQL` • `Express.js` • `React` • `Node.js` • `JWT` • `Stripe` • `Docker` • `REST APIs` • `pgAdmin4` • `Postman`
 
 {% endcapture %}
 
@@ -120,8 +113,7 @@ content=lotus_content
 
 ~B~
 
-**Tech**  
-`PHP` • `Moodle` • `Mobile UX` • `Accessibility`
+**Tech** • `PHP` • `Moodle` • `Mobile UX` • `Accessibility`
 
 {% endcapture %}
 

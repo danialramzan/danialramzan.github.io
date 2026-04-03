@@ -409,3 +409,61 @@ body {
     padding-right: $section-spacing;
   }
 }
+
+
+/* ================================
+   STAR FIELD (sidebar background)
+================================ */
+
+//#sidebar {
+//  overflow: hidden;
+//  isolation: isolate;
+//}
+//
+//#star-field {
+//  position: absolute;
+//  inset: 0;
+//  pointer-events: none;
+//  z-index: 0;
+//}
+//
+//#star-field .star {
+//  position: absolute;
+//  display: block;
+//  transform-origin: center center;
+//  user-select: none;
+//}
+//
+//#sidebar > *:not(#star-field) {
+//  position: relative;
+//  z-index: 1;
+//}
+
+#sidebar {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+#star-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#star-field .star {
+  position: absolute;
+  display: block;
+  transform-origin: center center;
+  user-select: none;
+  opacity: 0.8;
+}
+
+#sidebar > * {
+  position: relative;
+  z-index: 1;
+}
+
+#star-field {
+  z-index: 0;
+}
